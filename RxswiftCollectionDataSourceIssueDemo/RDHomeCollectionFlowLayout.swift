@@ -17,10 +17,7 @@ class RDHomeCollectionFlowLayout: UICollectionViewFlowLayout {
         let contentWidth = self.collectionView?.bounds.size.width
         let contentHeight = RD.CustomCollection.DayHeaderHeight * 2// (HeightPerHour * HoursPerDay)
         let contentSize = CGSize(width: contentWidth!, height: contentHeight)
-        
-//        if (collectionView?.numberOfSections)! < 1 { // <--- this is needed
-//            return .zero
-//        }
+
         
         return contentSize
     }
@@ -32,12 +29,7 @@ class RDHomeCollectionFlowLayout: UICollectionViewFlowLayout {
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
-        
-        if (self.collectionView?.numberOfSections ?? 0) < 1 { // <--- this is needed
-            return []
-        } else {
-            
-        }
+
         // Cells
         let attributesArray = super.layoutAttributesForElements(in: rect);
         guard self.collectionView != nil else {return attributesArray;}
