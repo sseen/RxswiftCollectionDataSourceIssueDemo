@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.itemSize = CGSize(width: self.itemWidth(), height: RD.CommonUnit.bannerHeight / 2)
-        layout.headerReferenceSize = CGSize(width: K.ViewSize.SCREEN_WIDTH, height:RD.CommonUnit.bannerHeight)
         mainCollection = UICollectionView(frame: CGRect(x: 0, y: RD.CommonUnit.navPlusStatus, width: K.ViewSize.SCREEN_WIDTH, height: K.ViewSize.SCREEN_HEIGHT), collectionViewLayout: layout)
         mainCollection.bounces = true
         mainCollection.alwaysBounceVertical = true
