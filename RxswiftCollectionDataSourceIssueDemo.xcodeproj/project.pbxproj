@@ -12,6 +12,9 @@
 		92F24C541F1CB616001D88A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F24C521F1CB616001D88A5 /* Main.storyboard */; };
 		92F24C561F1CB616001D88A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F24C551F1CB616001D88A5 /* Assets.xcassets */; };
 		92F24C591F1CB616001D88A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F24C571F1CB616001D88A5 /* LaunchScreen.storyboard */; };
+		92F24C611F1CB933001D88A5 /* RDHomeCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F24C601F1CB933001D88A5 /* RDHomeCollectionFlowLayout.swift */; };
+		92F24C631F1CB94A001D88A5 /* RDHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F24C621F1CB94A001D88A5 /* RDHomeCollectionViewCell.swift */; };
+		92F24C651F1CBA9D001D88A5 /* RDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F24C641F1CBA9D001D88A5 /* RDUtils.swift */; };
 		E56BF52A6A702AD7DA2B63E9 /* Pods_RxswiftCollectionDataSourceIssueDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F54735A6643863DC336B929 /* Pods_RxswiftCollectionDataSourceIssueDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		92F24C551F1CB616001D88A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92F24C581F1CB616001D88A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92F24C5A1F1CB616001D88A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F24C601F1CB933001D88A5 /* RDHomeCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDHomeCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		92F24C621F1CB94A001D88A5 /* RDHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		92F24C641F1CBA9D001D88A5 /* RDUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDUtils.swift; sourceTree = "<group>"; };
 		A923BE9CEE2CCAA2524B5737 /* Pods-RxswiftCollectionDataSourceIssueDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxswiftCollectionDataSourceIssueDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxswiftCollectionDataSourceIssueDemo/Pods-RxswiftCollectionDataSourceIssueDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +77,9 @@
 			children = (
 				92F24C4E1F1CB616001D88A5 /* AppDelegate.swift */,
 				92F24C501F1CB616001D88A5 /* ViewController.swift */,
+				92F24C641F1CBA9D001D88A5 /* RDUtils.swift */,
+				92F24C601F1CB933001D88A5 /* RDHomeCollectionFlowLayout.swift */,
+				92F24C621F1CB94A001D88A5 /* RDHomeCollectionViewCell.swift */,
 				92F24C521F1CB616001D88A5 /* Main.storyboard */,
 				92F24C551F1CB616001D88A5 /* Assets.xcassets */,
 				92F24C571F1CB616001D88A5 /* LaunchScreen.storyboard */,
@@ -211,8 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F24C651F1CBA9D001D88A5 /* RDUtils.swift in Sources */,
+				92F24C611F1CB933001D88A5 /* RDHomeCollectionFlowLayout.swift in Sources */,
 				92F24C511F1CB616001D88A5 /* ViewController.swift in Sources */,
 				92F24C4F1F1CB616001D88A5 /* AppDelegate.swift in Sources */,
+				92F24C631F1CB94A001D88A5 /* RDHomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +388,7 @@
 				92F24C5F1F1CB616001D88A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
