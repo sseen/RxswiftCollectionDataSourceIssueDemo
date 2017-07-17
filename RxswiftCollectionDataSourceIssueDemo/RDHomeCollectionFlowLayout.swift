@@ -26,6 +26,7 @@ class RDHomeCollectionFlowLayout: UICollectionViewFlowLayout {
     }
     
     override func prepare() {
+        print("sso \(datas)")
         if (self.collectionView?.numberOfSections)! > 0 {
             
             let numberOfElements = self.collectionView?.numberOfItems(inSection: 0)
@@ -52,14 +53,6 @@ class RDHomeCollectionFlowLayout: UICollectionViewFlowLayout {
             layoutAttributes.append(attributes!)
         }
         
-        // Supplementary views
-        // let headerIndexPaths = self.indexPathsHeaderViewsInRect(rect)
-        // for indexPath in headerIndexPaths {
-//        let indexPath = IndexPath(item: 0, section: 0)
-//            let attributes = self.layoutAttributesForSupplementaryView(ofKind: RD.CommonUnit.headerReuse, at: indexPath)
-//            layoutAttributes.append(attributes!)
-        // }
-        
         print("\(layoutAttributes.count)")
         
         return layoutAttributes
@@ -77,17 +70,6 @@ class RDHomeCollectionFlowLayout: UICollectionViewFlowLayout {
         return indexPaths
     }
     
-    func indexPathsHeaderViewsInRect(_ rect:CGRect) -> [IndexPath] {
-        var indexPaths:[IndexPath] = []
-        if rect.minY <= RD.CustomCollection.DayHeaderHeight {
-            
-            let aIndexPath = IndexPath(item: 0, section: 0)
-            indexPaths.append(aIndexPath)
-        }
-        
-        return indexPaths
-    }
-    
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
@@ -95,20 +77,6 @@ class RDHomeCollectionFlowLayout: UICollectionViewFlowLayout {
                                   y: RD.CustomCollection.HourHeaderWidth * (CGFloat)(indexPath.item % 4),
                                   width: self.itemWidth(),
                                   height: RD.CustomCollection.HourHeaderWidth)
-        
-        return attributes
-    }
-    
-    override func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        
-        print("oo")
-        let attributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: elementKind, with: indexPath)
-        
-        if elementKind == RD.CommonUnit.headerReuse {
-            attributes.frame = CGRect(x: 0, y: 0, width: K.ViewSize.SCREEN_WIDTH, height: RD.CommonUnit.bannerHeight)
-        } else {
-            attributes.frame = CGRect(x: 0, y: 0, width: K.ViewSize.SCREEN_WIDTH, height: 0)
-        }
         
         return attributes
     }
