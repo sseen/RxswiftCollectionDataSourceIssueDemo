@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let layout = RDHomeCollectionFlowLayout()
-        layout.datas = ViewController.initialValue
         mainCollection = UICollectionView(frame: CGRect(x: 0, y: RD.CommonUnit.navPlusStatus, width: K.ViewSize.SCREEN_WIDTH, height: K.ViewSize.SCREEN_HEIGHT), collectionViewLayout: layout)
         mainCollection.bounces = true
         mainCollection.alwaysBounceVertical = true
@@ -39,6 +38,7 @@ class ViewController: UIViewController {
         // rx data
         self.sections.value = ViewController.initialValue
         let cvReloadDataSource = RxCollectionViewSectionedReloadDataSource<NumberSection>()
+        
         // cell
         cvReloadDataSource.configureCell = { (_, cv, ip, i) in
             let cell = cv.dequeueReusableCell(withReuseIdentifier: RD.CommonUnit.cellReuse, for: ip) as! RDHomeCollectionViewCell
